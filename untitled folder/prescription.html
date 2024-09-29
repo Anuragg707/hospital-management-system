@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Write Prescription</h2>
+    <form action="submit_prescription.php" method="POST">
+        <label for="patient">Select Patient:</label>
+        <select id="patient" name="patient_id" required>
+            <option value="">Select a Patient</option>
+            <!-- Populate dynamically from the database -->
+            <option value="1">Nidhi Singh</option>
+            <option value="2">Aditya</option>
+            <option value="3">Mansi</option>
+        </select>
+
+        <label for="medication">Medication:</label>
+        <textarea id="medication" name="medication" rows="4" placeholder="Enter medication details (drug name, dosage, frequency, etc.)" required></textarea>
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="4" placeholder="Additional instructions for the patient..." required></textarea>
+
+       
+        <button type="button" onclick="window.location.href='confirmation.html'">Confirm Prescription</button></a>
+        
+    </form>
+</div>
+
+</body>
+</html>
